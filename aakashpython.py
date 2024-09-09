@@ -378,4 +378,227 @@ s1
 {7, 8, 10, 12}
 s1.pop()
 7
+# key: value
+nameToPhoneMap = { "akhil": "phoneNumber", "tamzi": "tamzi phone", "asif": "asif phone"  }
+nameToPhoneMap["akhil"]
+'phoneNumber'
+nameToPhoneMap["tamzi"]
+'tamzi phone'
+nameToPhoneMap["jon"]
+Traceback (most recent call last):
+  File "<pyshell#215>", line 1, in <module>
+    nameToPhoneMap["jon"]
+KeyError: 'jon'
+nameToPhoneMap.get("akhil")
+'phoneNumber'
+nameToPhoneMap.get("jon", "default number")
+'default number'
+nameToPhoneMap.get("james", "default number")
+'default number'
+nameToPhoneMap.get("james") == None
+True
+dir(nameToPhoneMap)
+['__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__ior__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__ror__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+nameToPhoneMap.items()
+dict_items([('akhil', 'phoneNumber'), ('tamzi', 'tamzi phone'), ('asif', 'asif phone')])
+nameToPhoneMap.keys()
+dict_keys(['akhil', 'tamzi', 'asif'])
+nameToPhoneMap.values()
+dict_values(['phoneNumber', 'tamzi phone', 'asif phone'])
+nameToPhoneMap.update({"akhil": "phoneNumber1"})
+nameToPhoneMap
+{'akhil': 'phoneNumber1', 'tamzi': 'tamzi phone', 'asif': 'asif phone'}
+nameToPhoneMap.update({"jon": "jon number"})
+nameToPhoneMap
+{'akhil': 'phoneNumber1', 'tamzi': 'tamzi phone', 'asif': 'asif phone', 'jon': 'jon number'}
+nameToPhoneMap.pop()
+Traceback (most recent call last):
+  File "<pyshell#228>", line 1, in <module>
+    nameToPhoneMap.pop()
+TypeError: pop expected at least 1 argument, got 0
+nameToPhoneMap.pop("akhil")
+'phoneNumber1'
+nameToPhoneMap
+{'tamzi': 'tamzi phone', 'asif': 'asif phone', 'jon': 'jon number'}
+nameToPhoneMap.pop("james")
+Traceback (most recent call last):
+  File "<pyshell#231>", line 1, in <module>
+    nameToPhoneMap.pop("james")
+KeyError: 'james'
+nameToPhoneMap.popitem()
+('jon', 'jon number')
+nameToPhoneMap
+{'tamzi': 'tamzi phone', 'asif': 'asif phone'}
+nameToPhoneMap.popitem()
+('asif', 'asif phone')
+nameToPhoneMap
+{'tamzi': 'tamzi phone'}
+nameToPhoneMap.setdefault('akhil', 'akhil phone')
+'akhil phone'
+nameToPhoneMap
+{'tamzi': 'tamzi phone', 'akhil': 'akhil phone'}
+nameToPhoneMap.setdefault('akhil', 'akhil phone1')
+'akhil phone'
+nameToPhoneMap
+{'tamzi': 'tamzi phone', 'akhil': 'akhil phone'}
+nameToPhoneMap.fromkeys(['person1', 'person2', 'person3'], 'common phone number')
+{'person1': 'common phone number', 'person2': 'common phone number', 'person3': 'common phone number'}
+True
+True
+False
+False
+4 > 5
+False
+5 < 6
+True
+4 > 5 and 5 < 6
+False
+# and # truth table
+# operand1 and operand2
+# True and True => True
+# True and False => False
+# False and True => False
+# False and False => False
+# op1 and op2 and op3 => op4 and op3
+True and True
+True
+False and False
+False
+True and False
+False
+False and True
+False
+# or
+# True and True => True
+# True and False => true
+# False and True => True
+
+True or True
+True
+True or False
+True
+False or True
+True
+False or False
+False
+# in => iteration
+fruits = ["apple", "banana", "grapes"]
+"grapes" in fruits
+True
+"pineapple" in fruits
+False
+"apple"=="grapes" or "banana" == "grapes" or "grapes" == "grapes"
+True
+for fruit in fruits:
+    print(fruit)
+
+    
+apple
+banana
+grapes
+list(range(0, 10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+for i in range(0, 10):
+    print(i)
+
+    
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+for i in range(0, 10, 2):
+    print(i)
+
+    
+0
+2
+4
+6
+8
+for i in range(10):
+    print(i)
+
+    
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+# print numbers between 10 to 100
+for i in range(11, 20):
+    print(i)
+
+    
+11
+12
+13
+14
+15
+16
+17
+18
+19
+number = 10
+while number < 15:
+    print(number)
+    number += 1
+
+    
+10
+11
+12
+13
+14
+number = 10
+if number < 10:
+    print("number is less than 10")
+else:
+    print("number is not less than 10")
+
+    
+number is not less than 10
+if number < 10:
+    print("number is less than 10")
+elif number > 10:
+    print("number is greater than 10")
+else:
+    print("number is equal to 10")
+
+    
+number is equal to 10
+if number < 10:
+    print("number is less than 10")
+elif number > 10:
+    print("number is greater than 10")
+else:
+    print("number is equal to 10")
+else:
+    
+SyntaxError: invalid syntax
+if number < 10:
+    print("number is less than 10")
+elif number > 10:
+    print("number is greater than 10")
+else:
+    print("number is equal to 10")
+else:
+    
+SyntaxError: invalid syntax
+if number < 10:
+    print("number is less than 10")
+elif number > 10:
+    print("number is greater than 10")
+
+    
 
